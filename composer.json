@@ -1,0 +1,30 @@
+{
+    "name": "wangjunjie/crypt",
+    "description": "明文传输:数据签名/验签、密文传输:数据加/解密",
+    "require": {
+        "php": "^7.3",
+        "illuminate/container": "^5.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wangjunjie",
+            "email": "18382239352@163.com"
+        }
+    ],
+    "autoload": {
+          "psr-4": {
+              "JanjanEnjoy\\Crypt\\": "./src"
+          }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JanjanEnjoy\\Crypt\\CryptServiceProvider"
+            ],
+            "aliases": {
+                "Crypt": "JanjanEnjoy\\Crypt\\Facade\\Crypt"
+            }
+        }
+    }
+}
