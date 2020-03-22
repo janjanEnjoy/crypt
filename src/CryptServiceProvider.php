@@ -1,5 +1,5 @@
 <?php
-namespace JanJanEnjoy\Crypt;
+namespace JanjanEnjoy\Crypt;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Application as LaravelApplication;

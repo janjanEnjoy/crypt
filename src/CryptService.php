@@ -5,9 +5,9 @@
  * Date: 2020/3/21
  * Time: 16:02
  */
-namespace JanJanEnjoy\Crypt;
+namespace JanjanEnjoy\Crypt;
 
-use JanJanEnjoy\Crypt\Exceptions\CryptException;
+use JanjanEnjoy\Crypt\Exceptions\CryptException;
 
 class CryptService
 {
