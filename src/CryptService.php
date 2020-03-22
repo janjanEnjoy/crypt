@@ -23,9 +23,9 @@ class CryptService
     public function __construct($config = [])
     {
 
-        $config = empty($config) ?: include(__DIR__ . "/../config/crypt.php");
+        $config = empty($config) ?: config('crypt')??include(__DIR__ . "/../config/crypt.php");
 
-        if (isset($config['app_secret'])) {
+        if (!isset($config['app_secret'])) {
             throw new CryptException(5018);
         }
         $this->key = $config['app_secret'];
