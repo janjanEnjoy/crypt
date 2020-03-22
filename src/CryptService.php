@@ -5,6 +5,7 @@
  * Date: 2020/3/21
  * Time: 16:02
  */
+
 namespace JanjanEnjoy\Crypt;
 
 use JanjanEnjoy\Crypt\Exceptions\CryptException;
@@ -19,15 +20,15 @@ class CryptService
      * @param array $config
      * @throws CryptException
      */
-    public function __construct($config=[])
+    public function __construct($config = [])
     {
 
-        $config = empty($config)?:include(__DIR__ . "/../config/crypt.php");
+        $config = empty($config) ?: include(__DIR__ . "/../config/crypt.php");
 
-        if(isset($config['app_secret'])){
+        if (isset($config['app_secret'])) {
             throw new CryptException(5018);
         }
-        $this->key =  $config['app_secret'];
+        $this->key = $config['app_secret'];
     }
 
     /**
@@ -37,7 +38,7 @@ class CryptService
      * @param $secret
      * @return string
      */
-    public function sign(Array $signParameter, $secret)
+    public function sign(Array $signParameter, $secret = null)
     {
         if (is_null($secret)) {
             $secret = $this->key;
@@ -53,8 +54,8 @@ class CryptService
      * @param $secret
      * @return bool
      */
-    public function signCheck($parameter, $sign, $secret)
+    public function signCheck($parameter, $sign, $secret = null)
     {
-        return Signature::checkSign($parameter, $sign, $secret);
+        return self::sign($parameter, $secret) == $sign;
     }
 }
