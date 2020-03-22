@@ -6,6 +6,7 @@
  * Time: 15:58
  */
 
+namespace JanJanEnjoy\Crypt\Exceptions;
 
 class CryptException extends \Exception
 {

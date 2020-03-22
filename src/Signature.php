@@ -6,6 +6,7 @@
  * Time: 16:11
  */
 
+namespace JanJanEnjoy\Crypt;
 
 class Signature
 {

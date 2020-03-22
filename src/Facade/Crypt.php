@@ -5,7 +5,7 @@ namespace JanjanEnjoy\Crypt\Facade;
 
 
 use Illuminate\Support\Facades\Facade;
-use CryptService;
+use JanJanEnjoy\Crypt\CryptService;
 
 
 /**

@@ -5,13 +5,20 @@
  * Date: 2020/3/21
  * Time: 16:02
  */
+namespace JanJanEnjoy\Crypt;
 
-use CryptException;
+use JanJanEnjoy\Crypt\Exceptions\CryptException;
 
 class CryptService
 {
     private $key;
 
+    /**
+     * 构造方法
+     * CryptService constructor.
+     * @param array $config
+     * @throws CryptException
+     */
     public function __construct($config=[])
     {
 
@@ -26,8 +33,9 @@ class CryptService
     /**
      * 签名
      * user: wangjunjie
-     * @param $signParameter
+     * @param array $signParameter
      * @param $secret
+     * @return string
      */
     public function sign(Array $signParameter, $secret)
     {
